@@ -1,0 +1,205 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+.footer{
+
+    text-align: center;
+    @include m.desktopXL{
+        text-align: left;
+        
+    }
+    background-color: rgb(10, 10, 10);
+
+}
+.containerg-datafooter{
+    max-width: 1630px;
+    margin: 0 auto;
+}
+.container-datafooter{
+   
+    padding: 4rem 0;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    row-gap: 4rem;
+    place-items: center;
+    @include m.desktopXL{
+        padding: 8rem 0;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        place-items: center;
+    }
+
+}
+
+
+
+.logo-web{
+    max-width: 280px;
+    h2{
+        color: rgb(224, 224, 224);
+        font-size: 2rem;
+        text-transform: uppercase;
+        margin: 0;
+        
+    }
+    p{
+        color: rgb(228, 228, 228);
+        margin: 0;
+        font-size: .8rem;
+    }
+}
+
+.img-location{
+    width: 40px;
+    height: 40px;
+      color: rgb(37, 166, 241);
+      margin-right: .5rem;
+
+    svg{
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.title-location{
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+@include m.desktopXL{
+    justify-content: left;
+
+}
+p{
+    color: white;
+    font-size: 1.2rem;
+}
+}
+
+.descrip-location{
+    max-width: 280px;
+    p{
+        color: white;
+        font-size: .8rem;
+        width: 100%;
+        margin: 0;
+
+    }
+}
+
+
+
+/*CONTACT FOOTER*/
+
+.contact-footer{
+
+
+
+    width: 80%;
+    margin: 0 auto;
+    p{
+     
+        color: white;
+        font-size: 1.2rem;
+        margin: 0;
+    }
+    form{
+      
+        input:not([type="submit"]){
+            margin: .6rem 0;
+            width: 90%;
+            font-size: .7rem;
+            padding: .5rem .3rem;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            transition: .5s width ease-in-out;
+            &:focus{
+                width: 100%;
+            }
+        }
+        input[type="submit"]{
+            margin: 0 auto;
+
+            display: block;
+            background-color: var(--strongBlue);
+            outline: none;
+            border: none;
+            color: white;
+            font-weight: 500;
+            padding: .6rem 1.8rem;
+            transition: .5s background ease-in-out;
+            text-transform: uppercase;
+            font-size: .7rem;
+            font-weight: 600;
+            &:hover{
+                cursor: pointer;
+                background-color: var(--lightBlue);
+            }
+            @include m.desktopXL{
+                margin: 0;
+
+            }
+        }
+    }
+}
+
+
+.container-msg{
+    margin: 0 auto;
+    display: grid;
+    place-items: center;
+    width: 30%;
+    height: 50px;
+    text-align: center;
+    color: white;
+    background-color: rgb(173, 0, 0);
+    border-bottom-left-radius: 120px;
+    border-bottom-right-radius: 120px;
+}
+
+.social-methods{
+    max-width: 1300px;
+    display:flex ;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    @include m.desktopXL{
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        place-items: center;
+    }
+  
+}
+
+.social-media{
+
+    max-width: 100px;
+    display: flex;
+    justify-content: space-between;
+    svg{
+        color: rgba(255, 255, 255, 0.822);
+        margin: 0 .3rem;
+        @include m.desktopXL{
+            margin:0 .3rem;
+        }
+    }
+   
+}
+
+
+.methods-footer{
+    display: flex;
+    align-items: center;
+    grid-column: 3;
+    justify-content: left;
+}
+
+.visa{
+    width: 36px;
+}
+.master{
+    width: 36px;
+}

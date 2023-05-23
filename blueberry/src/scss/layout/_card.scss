@@ -1,0 +1,35 @@
+
+@use '../base/mixins' as m;
+.container-card{
+    position: absolute;
+    bottom: 0%;
+
+    width: 80%;
+    z-index: 10000;
+
+    border-radius: 15px;
+    transition: opacity .5s ease-in-out;
+    background-color: rgba(241, 241, 241, 0.918);
+    padding: .7rem 1rem;
+    h2{
+        color: black;
+        font-size: .8rem;
+        margin: 0;
+        text-transform: capitalize;
+
+    }
+    p{
+        color: rgb(7, 7, 7);
+        font-size: .7rem;
+        margin: .5rem 0;
+
+    }
+    @include m.tablet{
+        left: 30%;
+        width: 70%;
+
+    }
+}
+.visible{
+    opacity: 1;
+}

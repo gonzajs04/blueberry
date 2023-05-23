@@ -1,0 +1,147 @@
+@use "../base/mixins" as m;
+.types {
+
+  padding-top: 4rem;
+  padding-bottom: 8rem;
+  padding-left: 0;
+  padding-right: 0;
+  background-color: whitesmoke;
+}
+.container-types {
+  display: grid;
+  place-items: center;
+  row-gap: 4rem;
+  padding: 0 .5rem;
+  @include m.tablet{
+    padding: 0;
+    
+  }
+
+  @include m.desktop{
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+
+  @include m.desktopXL {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+
+  }
+}
+
+.containerg-types {
+    max-width: 1450px;
+    margin:0 auto
+}
+.type {
+  min-height: 498px;
+  position: relative;
+  z-index: 100;
+  -webkit-box-shadow: 0px 0px 20px 2px rgba(235, 235, 235, 1);
+  -moz-box-shadow: 0px 0px 20px 2px rgba(235, 235, 235, 1);
+  box-shadow: 0px 0px 20px 2px rgba(235, 235, 235, 1);
+  max-width: 300px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.container-typeimg {
+  width: auto;
+
+  max-height: 250px;
+  height: 250px;
+  margin: 0 auto;
+  @include m.tablet{
+    width: 300px;
+
+  }
+
+  img {
+    object-fit: cover;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+  }
+}
+
+.container-name-description {
+  max-height: 180px;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 2rem 1rem;
+
+  background-color: white;
+  .container-type-name {
+    p {
+      margin: 0;
+      font-weight: 600;
+    }
+  }
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  .container-type-description {
+    max-height: 220px;
+    font-size: 0.7rem;
+    text-align: left;
+    text-indent: 20px; //SANGRIA
+    line-height: 1.5;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background-color: #d4d4d4; /* Color de fondo de la barra de desplazamiento */
+}
+
+.title-types {
+  width: 100%;
+  margin: 0 auto;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 2rem;
+  @include m.desktopXL{
+    width: 1370px;
+
+  }
+
+  p {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  @include m.desktopXL {
+    p {
+      text-align: left;
+      font-size: 3rem;
+    }
+  }
+}
+
+.circle {
+  clip-path: circle(50% at 50% 50%);
+  background-color: rgba(131, 131, 131, 0.055);
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  animation: bajar-subir 3s linear infinite;
+}
+.circle1 {
+  left: 2%;
+}
+.circle2 {
+  right: 5%;
+}
+.circle3 {
+  top: 20%;
+  right: 60%;
+}
+.circle4 {
+  top: 60%;
+  right: 30%;
+}
+.circle5 {
+  bottom: 1%;
+  left: 5%;
+}

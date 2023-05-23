@@ -1,0 +1,42 @@
+@use "../base/mixins" as m;
+.containerg-metodos {
+  padding-bottom: 2.5rem;
+  max-width: 1430px;
+  margin: 0 auto;
+  position: relative;
+}
+.container-metodos {
+  position: absolute;
+  z-index: 1000;
+  background-color: rgba(19, 19, 19, 0.932);
+  animation: meteorito 8s linear infinite;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+  border-radius: none;
+  @include m.desktop {
+    border-radius: 60px;
+  }
+}
+
+.metodo {
+  width: 3rem;
+  position: relative;
+  @include m.tablet {
+    width: 5rem;
+  }
+  img {
+    object-fit: cover;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+.methods {
+  position: absolute !important;
+  left: 70%;
+  width: 100%;
+  padding: 0.5rem 2rem;
+}

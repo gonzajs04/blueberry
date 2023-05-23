@@ -1,0 +1,209 @@
+@use '../base/variables';
+@use '../base/App';
+@use '../base/mixins.scss' as m;
+.nav a{
+    visibility: hidden;
+    text-decoration: none;
+    margin: 0 .6rem;
+    color: var(--white);
+    &:hover{
+        cursor: pointer;
+    }
+    font-size: 1.5rem;
+    transition: .5s visibility ease-in-out;
+
+}
+
+#aparecerLink{
+    visibility: visible !important;
+}
+
+@include m.desktop{
+    .nav a{
+        visibility: visible;
+       font-size:1rem;
+    }
+}
+
+
+ .container-nav{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+   display: block;
+   .nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  
+
+   }
+
+}
+
+.containerg-header{
+    position: relative;
+    height: 100%;
+}
+
+.container-header
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+
+.container-logo-text{
+    max-width: 1600px;
+    margin: 0 auto;
+height: 85%;
+    display: flex;
+    align-items: center;
+
+}
+
+
+.container-logo-text h1{
+    color: var(--white);
+    font-size: 5rem;
+    margin: 0;
+    animation: palpitar linear infinite 3s;
+    @include m.tablet{
+        font-size: 10rem;
+    }
+    
+}
+.container-logo-text p{
+    margin: 0;
+    font-size: 1rem;
+
+    text-align: center;
+    font-family: 900;
+    text-transform: uppercase;
+    color: rgb(207, 207, 207);
+    @include m.tablet{
+        font-size: 2rem;
+
+    }
+    
+    
+    }
+.container-logo{
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+align-items: center;}
+
+.part1{
+    margin-right: 0;
+    @include m.tablet{
+        margin-right: 2.5rem;
+    }
+}
+
+//IMGS
+
+.container-imgheader img{
+object-fit: cover;
+object-position:top;
+height: 960px;
+}
+
+
+
+/*MENU*/
+
+
+
+.container-menu{
+    display: block;
+    position: absolute;
+    z-index: 10000;
+    left: 6%;
+    top: 1%;
+    width: 28px;
+    transition: transform .5s ease-in-out;
+    &:hover{
+        cursor: pointer;
+        transform: rotate(360deg);
+    }
+    &:active{
+        transform: rotate(360deg);
+    }
+}
+
+@include m.desktop{
+    .container-logo{
+       
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        place-items: center;
+    }
+
+
+}
+@include m.desktopXL{
+    .container-menu{
+        display: none;
+   
+    }
+    .container-nav{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        .nav{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+     
+       
+           }
+    }
+}
+
+.modal-nav{
+    transition: width .5s ease-in-out;
+
+    width: 0%;
+    background-color: rgba(15, 1, 75, 0.651);
+    position: fixed;
+    height: 100%;
+    z-index: 10;
+}
+@include m.desktopXL{
+    .modal-nav{
+        width: 100%;
+        position: relative;
+        background-color: transparent;
+        height: 10%;
+
+    }
+}
+
+
+//DESPLEGAR MODAL
+.desplegar{
+    z-index: 1000;
+
+    @include m.desktop{
+        width: 100%;
+    } 
+     
+    width: inherit;
+
+
+}
+.nav p{
+    &:hover{
+        cursor: pointer;
+    }
+}
