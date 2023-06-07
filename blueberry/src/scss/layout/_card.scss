@@ -2,10 +2,11 @@
 @use '../base/mixins' as m;
 .container-card{
     position: absolute;
+    
     bottom: 0%;
 
     width: 80%;
-    z-index: 10000;
+    z-index: 1000000;
 
     border-radius: 15px;
     transition: opacity .5s ease-in-out;

@@ -17,10 +17,8 @@ export default function Footer() {
         e.preventDefault();
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; //REGEX TO VALIDATE THAT IS A MAIL
         emailRegex.test(email) ? (setIsValidMail(true)) : setIsValidMail(false);
-
-
-
     }
+    
     return (
         <footer className="footer">
 

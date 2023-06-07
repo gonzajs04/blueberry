@@ -61,9 +61,14 @@
 .container-logo-text{
     max-width: 1600px;
     margin: 0 auto;
-height: 85%;
+height: 100%;
+@include m.tablet{
+    height: 85%;
+
+}
     display: flex;
     align-items: center;
+    justify-content: center;
 
 }
 
@@ -171,9 +176,10 @@ height: 960px;
 }
 
 .modal-nav{
-    transition: width .5s ease-in-out;
+    transition: all .5s ease;
 
     width: 0%;
+    opacity: 0;
     background-color: rgba(15, 1, 75, 0.651);
     position: fixed;
     height: 100%;
@@ -182,6 +188,8 @@ height: 960px;
 @include m.desktopXL{
     .modal-nav{
         width: 100%;
+        opacity: 1;
+
         position: relative;
         background-color: transparent;
         height: 10%;
@@ -193,7 +201,7 @@ height: 960px;
 //DESPLEGAR MODAL
 .desplegar{
     z-index: 1000;
-
+    opacity: 1;
     @include m.desktop{
         width: 100%;
     } 
